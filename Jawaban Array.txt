@@ -1,0 +1,46 @@
+1.1.Sebuah struktur data yang dapat menyimpan sejumlah element dengan tipe yang sama,dimana  setiap element dapat diakses dengan menggunakan index,yang dimulai dari 00
+
+2.karena panjang suatu array ditentukan saat  deklarasi dan tidak dapat diubah.namun ada suatu kelebihan ketika menggunakan array,yaitu  dalam pengelolaan dan penggunaan memori yang cenderung lebih sedikit
+
+3. Bentuk array satu dimensi dalam bentuk pseudocode :
+
+
+Deklarasi Array JurusanMahasiswa[6]
+
+JurusanMahasiswa[0] = "Teknik Informatika"
+JurusanMahasiswa[1] = "Teknik Komputer"
+JurusanMahasiswa[2] = "Sistem Informasi"
+JurusanMahasiswa[3] = "Teknik Sipil"
+JurusanMahasiswa[4] = "Teknik Elektro"
+JurusanMahasiswa[5] = "Sastra Bahasa"
+
+
+4.A.ketika ingin mengakses data dengan cepat,kita dapat menggunakan array untuk mengakses elemen.
+
+B. Dengan menggunakan array,kita dapat melakukan pengolahan data secara bersamaan,kita dapat memadukan array dan looping agar memudahkan operasi pada setiap bagian elemen dalam array.serta membuat kodingan lebih mudah dipahami(konsep clean code).
+
+
+C.ketika kita ingin mengolah data dengan tipe yang sama,array memudahkan kita untuk mengelompokkan dan mengelola dengan menggunakan index
+
+
+5.5.Deklarasi Array AbsensiSiswa[10]   // Misalnya, 10 siswa
+
+// Inisialisasi absensi awal
+Untuk setiap indeks i dari 0 hingga 9:
+    AbsensiSiswa[i] = "Hadir"
+
+// Proses pencatatan absensi
+Untuk setiap siswa dari 1 hingga 10:
+    Tampilkan "Apakah siswa", siswa, "hadir? (ya/tidak)"
+    Baca jawaban
+
+    Jika jawaban sama dengan "ya":
+        AbsensiSiswa[siswa - 1] = "Hadir"
+    Lainnya:
+        AbsensiSiswa[siswa - 1] = "Tidak Hadir"
+
+// Menampilkan hasil absensi
+Tampilkan "Hasil Absensi:"
+
+Untuk setiap indeks i dari 0 hingga 9:
+    Tampilkan "Siswa", i + 1, ":", AbsensiSiswa[i]
