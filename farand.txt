@@ -1,0 +1,66 @@
+1.9867 / 2  = 4933 (sisa 1)
+  4933 / 2 = 2466  (sisa 1)
+  2466 / 2 = 1233  (sisa 0)
+  1233 / 2 = 616   (sisa 1)
+  616 / 2 = 308    (sisa 0)
+  308 / 2 = 154    (sisa 0)
+  154 / 2 = 77     (sisa 0)
+  77 /  2 = 38     (sisa 1)
+  38 / 2 = 19      (sisa 0)
+  19 / 2 = 9       (sisa 1)
+  9 / 2 = 4        (sisa 1)
+  4 / 2 = 2        (sisa 0)
+  2 / 2 = 1        (sisa 0)
+  1 / 2 = 0        (sisa 1)
+  
+Hasil Konversi dari desimal ke biner 9867 = 10011010001011(10)
+
+
+9867 ÷ 8 = 1233 (sisa 3)
+1233 ÷ 8 = 154  (sisa 1) 
+154 ÷ 8 =  19   (sisa 2) 
+19 ÷ 8 =   2    (sisa 3) 
+2 ÷ 8 =    0    (sisa 2)
+
+hasil konversi dari desimal 9867 ke oktal adalah = 23213(8)
+
+
+9867 ÷ 16 = 616  (sisa 11)
+616 ÷ 16 = 38    (sisa 8)
+38 ÷ 16 = 2      (sisa 6)
+2 ÷ 16 = 0       (sisa 2)
+
+Hasil konversi dari desimal ke  hexadesimal 9867 = 269B (16)
+
+
+ bentuk dalam pseudocode adalah sebgai berikut :
+
+program konversi_bilangan;
+
+start
+
+Inisialisasi variabel n dengan nilai 9867
+Inisialisasi variabel hasil_biner dengan string kosong
+Inisialisasi variabel hasil_oktal dengan string kosong
+Inisialisasi variabel hasil_heksadesimal dengan string kosong
+
+Selama n > 0:
+    Dapatkan sisa bagi n dibagi 2 dan simpan dalam variabel sisa_biner
+    Dapatkan sisa bagi n dibagi 8 dan simpan dalam variabel sisa_oktal
+    Dapatkan sisa bagi n dibagi 16 dan simpan dalam variabel sisa_heksadesimal
+    
+    hasil_biner = sisa_biner + hasil_biner
+    hasil_oktal = sisa_oktal + hasil_oktal
+    hasil_heksadesimal = sisa_heksadesimal + hasil_heksadesimal
+    
+    n = n / 2
+    n = n / 8
+    n = n / 16
+
+Hasil konversi desimal ke biner adalah hasil_biner
+Hasil konversi desimal ke oktal adalah hasil_oktal
+Hasil konversi desimal ke heksadesimal adalah hasil_heksadesimal
+
+end
+
+
