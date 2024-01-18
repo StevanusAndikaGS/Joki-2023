@@ -1,0 +1,42 @@
+program TahunKabisat;
+
+var
+  tahun: integer;
+
+begin
+  // Meminta pengguna untuk memasukkan tahun
+  write('Masukkan tahun: ');
+  readln(tahun);
+
+  // Memeriksa apakah tahun adalah tahun kabisat
+  if ((tahun mod 4 = 0) and (tahun mod 100 <> 0)) or (tahun mod 400 = 0) then
+    writeln(tahun, ' adalah tahun kabisat.')
+  else
+    writeln(tahun, ' bukan tahun kabisat.');
+
+  // Menunggu tombol Enter sebelum keluar
+  readln;
+end.
+
+
+program AngkaTerbesar;
+var
+  input1, input2, terbesar: integer;
+begin
+  // Menerima input angka pertama
+  write('Input angka pertama: ');
+  readln(input1);
+
+  // Menerima input angka kedua
+  write('Input angka kedua: ');
+  readln(input2);
+
+  // Menentukan angka terbesar
+  if input1 > input2 then
+    terbesar := input1
+  else
+    terbesar := input2;
+
+  // Menampilkan angka terbesar
+  writeln('Angka terbesar adalah ', terbesar);
+end.

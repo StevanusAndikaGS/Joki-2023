@@ -1,0 +1,82 @@
+#include <stdio.h>
+
+int main() {
+    int maxCredit, maxItems;
+    int currentCredit = 0;
+    int itemCount = 0;
+
+    // Membaca jumlah dana kartu kredit Tuan X dan jumlah maksimum barang yang dapat diambil
+    printf("Masukkan jumlah dana kartu kredit Tuan X dan jumlah maksimum barang yang dapat diambil: ");
+    scanf("%d %d", &maxCredit, &maxItems);
+
+    // Loop untuk meminta input angka (harga barang) dan menghitung jumlah barang yang dibeli
+    while (currentCredit <= maxCredit && itemCount < maxItems) {
+        int itemPrice;
+        printf("Masukkan harga barang ke-%d: ", itemCount + 1);
+        scanf("%d", &itemPrice);
+
+        // Mengecek apakah harga barang melebihi sisa kartu kredit atau jumlah barang melebihi batas
+        if (currentCredit + itemPrice <= maxCredit && itemCount + 1 <= maxItems) {
+            currentCredit += itemPrice;
+            itemCount++;
+
+            // Mengecek apakah jumlah barang telah mencapai batas maksimum
+            if (itemCount == maxItems) {
+                break; // Menghentikan loop jika jumlah barang mencapai batas maksimum
+            }
+        } else {
+            break; // Menghentikan loop jika harga barang tidak dapat ditambahkan
+        }
+    }
+
+    // Mencetak jumlah barang yang dibayar oleh Tuan X
+    printf("Penjelasan untuk Test Case 1\n");
+    printf("Batas kartu kredit di input sebesar %d dan batas barang yang bisa dibawa oleh peserta adalah %d.\n", maxCredit, maxItems);
+
+    for (int i = 0; i < itemCount; i++) {
+        printf("Pada input harga ke-%d adalah ", i + 1);
+        int itemPrice;
+        scanf("%d", &itemPrice);
+
+        // Mengecek apakah harga barang melebihi sisa kartu kredit atau jumlah barang melebihi batas
+        if (currentCredit + itemPrice <= maxCredit && itemCount + 1 <= maxItems) {
+            currentCredit += itemPrice;
+            itemCount++;
+
+            printf("sehingga jumlah harga barang saat ini adalah %d ", currentCredit);
+            printf("dan jumlah barang adalah %d. (kartu kredit masih cukup dan jumlah barang belum menyentuh batas maksimum barang)\n");
+        } else {
+            break; // Menghentikan loop jika harga barang tidak dapat ditambahkan
+        }
+    }
+
+    printf("Walaupun kartu kredit Tuan Buas masih cukup untuk membayar barang lagi, ");
+    printf("namun jumlah barang yang dibayar sudah menyentuh batas maksimum barang, ");
+    printf("sehingga program berhenti meminta input.\n");
+    printf("Dengan demikian, jumlah barang yang dibayar oleh Tuan X adalah %d.\n", itemCount);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    int jumlahdana, maksitem, inputhb; //variabel untuk menyimpan
+    int itemdibeli = 0; //Jumlah item
+    int total = 0; //total harga 
+
+    scanf("%d %d", &jumlahdana, &maksitem); // Meminta input jumlah dana dan jumlah maksimum item yang dapat dibeli
+
+    // Memulai loop, akan terus berjalan selama total harga barang masih kurang dari atau sama dengan jumlah dana dan belum mencapai maksimum item yang dapat dibeli
+    while (total <= jumlahdana && itemdibeli < maksitem) {
+        scanf("%d", &inputhb) //  Input harga barang
+        total = inputhb + total; // Menambahkan harga barang ke total harga barang yang dibeli
+
+        if (total <= jumlahdana) { // Memeriksa apakah total harga barang yang dibeli masih kurang dari atau sama dengan jumlah dana
+            itemdibeli++; // Jika benar, meambahkan satu unit ke item yang telah dibeli
+        }
+    }
+    printf("%d", itemdibeli); // Mencetak jumlah barang yang berhasil dibeli
+    return 0;
+}

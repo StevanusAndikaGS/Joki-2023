@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int panjangA, panjangB;
+
+    // Input panjang lahan A
+    scanf("%d", &panjangA);
+
+    // Input panjang lahan B
+    scanf("%d", &panjangB);
+
+    // Menghitung luas lahan A
+    int luasA = panjangA * panjangA;
+
+    // Menghitung luas lahan B
+    int luasB = panjangB * panjangB;
+
+    // Membandingkan luas kedua lahan
+    if (luasA > luasB) {
+        printf("A\n");
+    } else if (luasA < luasB) {
+        printf("B\n");
+    } else {
+        printf("BEBAS\n");
+    }
+
+    return 0;
+}
